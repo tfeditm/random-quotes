@@ -1,0 +1,111 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Capriola", sans-serif;
+  font-size: 16px;
+}
+
+.canvas {
+  display: none;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#quote-container {
+  margin: 5% auto 0;
+  padding: 5%;
+  width: 60%;
+  height: auto;
+  background-color: rgba(160, 150, 160, 0.95);
+  quotes: "”" "”" "‘" "’";
+  position: relative;
+  z-index: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+#quote-container:before {
+  content: open-quote;
+  font-size: 600%;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 10%;
+  z-index: 1;
+  display: block;
+}
+#quote-container .quote {
+  margin-bottom: 5%;
+  color: #3c283c;
+  position: relative;
+  z-index: 2;
+}
+#quote-container .quote p {
+  margin-bottom: 5%;
+  margin-top: 5%;
+  font-size: 1.4em;
+  line-height: 1.4;
+  min-height: 6.4em;
+}
+@media (min-width: 750px) {
+  #quote-container .quote p {
+    font-size: 1.6em;
+    line-height: 1.6;
+  }
+}
+#quote-container footer {
+  text-align: right;
+  font-size: 1.2em;
+}
+#quote-container footer:before {
+  content: "– ";
+}
+#quote-container .buttons {
+  display: block;
+}
+#quote-container .twitter,
+#quote-container .new-quote {
+  display: block;
+  color: #64fa64;
+  background-color: rgba(40, 27, 28, 0.6);
+  transition: all 0.7s;
+  cursor: pointer;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+#quote-container .twitter:hover,
+#quote-container .new-quote:hover {
+  color: #281b1c;
+  background-color: #649664;
+}
+#quote-container .twitter:focus,
+#quote-container .new-quote:focus {
+  outline: none;
+}
+#quote-container .twitter {
+  float: left;
+  margin-right: 6px;
+  font-size: 1.4em;
+  height: 38px;
+}
+#quote-container .new-quote {
+  float: right;
+  margin-left: 6px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
